@@ -14,24 +14,24 @@
 
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-  <script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Container(props) {
+      return <div>{props.children}</div>
+    }
+
+    function Header(props) {
+      return <h2>{props.children}</h2>
+    }
+
     const rootElement = document.getElementById('root')
     const rootNode = ReactDOM.createRoot(rootElement)
-    const container = React.createElement(
-      'div',
-      null,
-      React.createElement('h2', null, 'List of items'),
-      React.createElement(
-        'ul',
-        null,
-        React.createElement('li', null, 'First item'),
-        React.createElement('li', null, 'Second item'),
-        React.createElement('li', null, 'Third item'),
-        React.createElement('li', null, 'Fourth item'),
-        React.createElement('li', null, 'Fifth item'),
-      )
-    )
-    rootNode.render(container)
+    const listOfItems =
+      <Container>
+        <Header>List of items</Header>
+      </Container>
+
+    rootNode.render(listOfItems)
   </script>
 </body>
 
