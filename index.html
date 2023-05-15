@@ -15,34 +15,7 @@
   <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel">
-    function Container(props) {
-      return <div>{props.children}</div>
-    }
-
-    function Header(props) {
-      return <h2>{props.children}</h2>
-    }
-
-    function Item(props) {
-      return <li>{props.children}</li>
-    }
-
-    const items = [
-      'First item', 'Second item', 'Third item', 'Fourth item', 'Fifth item']
-
-    const rootElement = document.getElementById('root')
-    const rootNode = ReactDOM.createRoot(rootElement)
-    const listOfItems =
-      <Container>
-        <Header>List of items</Header>
-        <ul>
-          {items.map((item) => <Item key={item}>{item}</Item>)}
-        </ul>
-      </Container>
-
-    rootNode.render(listOfItems)
-  </script>
+  <script src="js/app.js" type="text/babel"></script>
 </body>
 
 </html>
