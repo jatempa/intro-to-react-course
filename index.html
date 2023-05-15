@@ -12,11 +12,13 @@
 <body>
   <div id="root"></div>
 
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <script>
     const rootElement = document.getElementById('root')
-    const element = document.createElement('h1')
-    element.textContent = 'Hello World'
-    rootElement.append(element)
+    const rootNode = ReactDOM.createRoot(rootElement)
+    const element = React.createElement('h1', null, 'Hello World')
+    rootNode.render(element)
   </script>
 </body>
 
