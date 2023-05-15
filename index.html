@@ -28,17 +28,16 @@
       return <li>{props.children}</li>
     }
 
+    const items = [
+      'First item', 'Second item', 'Third item', 'Fourth item', 'Fifth item']
+
     const rootElement = document.getElementById('root')
     const rootNode = ReactDOM.createRoot(rootElement)
     const listOfItems =
       <Container>
         <Header>List of items</Header>
         <ul>
-          <Item>First item</Item>
-          <Item>Second item</Item>
-          <Item>Third item</Item>
-          <Item>Fourth item</Item>
-          <Item>Fifth item</Item>
+          {items.map((item) => <Item>{item}</Item>)}
         </ul>
       </Container>
 
