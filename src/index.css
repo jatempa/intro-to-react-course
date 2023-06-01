@@ -17,3 +17,15 @@ html {
   width: 90%;
   margin: 2em auto;
 }
+
+ul li {
+  list-style-type: none;
+  height: 40px;
+  border: 1px solid;
+  margin-bottom: 1em;
+  padding: 10px 10px 0px;
+}
+
+ul li:first-of-type {
+  margin-top: 1.25em;
+}
