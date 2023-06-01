@@ -1,14 +1,6 @@
-function Container(props) {
-  return <div>{props.children}</div>;
-}
-
-function Header(props) {
-  return <h2>{props.children}</h2>;
-}
-
-function Item(props) {
-  return <li>{props.children}</li>;
-}
+import Container from './components/Container'
+import Header from './components/Header'
+import Item from './components/Item'
 
 const items = [
   'First item',
